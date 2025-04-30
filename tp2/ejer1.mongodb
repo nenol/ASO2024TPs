@@ -1,0 +1,9 @@
+use('empresa');
+
+db.empleados.insertMany([
+    {edad: 21, nombre: "Jose", puesto: "Pasante"},
+    {edad: 21, nombre: "Pedro", puesto: "Maquinista"},
+    {edad: 21, nombre: "Maria", puesto: "Repartidor"}
+]);
+db.empleados.updateOne  ({nombre: "Pedro"}, {$set: {edad: 45}});
+db.empleados.replaceOne({puesto: "Pasante"});

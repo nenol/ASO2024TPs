@@ -1,0 +1,26 @@
+use('empreas');
+db.ventas.insertMany([
+    {
+      producto: "Lápiz",
+      cantidad: 10,
+      precio_unitario: 0.5
+    },
+    {
+      producto: "Cuaderno",
+      cantidad: 5,
+      precio_unitario: 2.0
+    },
+    {
+      producto: "Regla",
+      cantidad: 3,
+      precio_unitario: 1.2
+    }
+  ])
+db.ventas.aggregate([
+    {
+      $group: {
+        _id: "$producto",
+        total: { $sum: { $multiply: ["$cantidad", "$precio_unitario"] } }
+      }
+    }
+  ])

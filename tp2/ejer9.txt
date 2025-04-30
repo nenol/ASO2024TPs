@@ -1,0 +1,3 @@
+La replicacion es tener backups de la base de datos en distintos servers, solamente pudiendo modificar uno y el resto sirve de respaldo y para aliviar las consultas al principal.
+El sharding es tener la base de datos distribuida en distintos servers, no aporta respaldos como la replicacion, pero sirve para distribuir la carga tanto de lectura como de escritura de la bd, ademas de que localiza la infomacion, por ejemplo tener datos de Sudamerica en un server en Chile y de Europa en Belgica.
+Las princiles diferecias son que el sharding aporta mayor capacidad de escritura (lectura tambien por la localizacion) y ocupa menos volumen, pero, no aporta respaldos.

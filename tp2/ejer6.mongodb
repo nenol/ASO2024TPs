@@ -1,0 +1,9 @@
+use('empresa');
+db.clientes.insertMany([
+    { nombre: "Ana", apellido: "González" },
+    { nombre: "Luis", apellido: "Martínez" },
+    { nombre: "María", apellido: "López" },
+    { nombre: "Carlos", apellido: "Pérez" }
+  ])
+db.clientes.createIndex({nombre: 1, apellido: 1})  
+db.clientes.getIndexes();

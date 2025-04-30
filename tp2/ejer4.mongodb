@@ -1,0 +1,11 @@
+use('empresa')
+db.empleados.updateMany(
+    {},
+    {$set:
+        {direccion: {
+            calle:"Null",
+            ciudad:"Bahia Blanca",
+            codigo_postal:8000
+    }}}
+  )
+  db.empleados.find();

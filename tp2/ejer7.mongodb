@@ -1,0 +1,46 @@
+use('Escuela');
+db.cursos.insertMany([
+    {
+      curso_id: 1,
+      nombre: "Matemáticas",
+      descripcion: "Curso de matemáticas básicas.",
+      duracion: "6 meses"
+    },
+    {
+      curso_id: 2,
+      nombre: "Lengua y Literatura",
+      descripcion: "Curso de lengua y literatura española.",
+      duracion: "4 meses"
+    },
+    {
+      curso_id: 3,
+      nombre: "Ciencias",
+      descripcion: "Curso de ciencias naturales.",
+      duracion: "5 meses"
+    }
+  ]);
+  db.alumnos.insertMany([
+    {
+      alumno_id: 1,
+      nombre: "Juan",
+      apellido: "Pérez"
+    },
+    {
+      alumno_id: 2,
+      nombre: "Laura",
+      apellido: "Gómez"
+    },
+    {
+      alumno_id: 3,
+      nombre: "Carlos",
+      apellido: "Martínez"
+    }
+  ]);
+  db.alumnos.updateMany({},
+    {$set:{
+        cursos:[
+            1, 2
+        ]
+    }}
+  );
+  db.alumnos.find({});

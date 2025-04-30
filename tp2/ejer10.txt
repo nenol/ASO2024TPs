@@ -1,0 +1,2 @@
+comandos para crear un suario con capacidad de lectura y escritura: db.createUser({ user: "admin", pwd: "clave", roles: ["readWrite", "dbAdmin"] })
+comandos para hacer backups: mongodump (crear backups) y mongorestore(leer backups)
